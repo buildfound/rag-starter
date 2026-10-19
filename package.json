@@ -2,6 +2,9 @@
   "name": "rag-starter",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,6 +14,7 @@
     "test": "tsx --test lib/*.test.ts"
   },
   "dependencies": {
+    "@next/env": "16.4.2",
     "next": "16.4.2",
     "openai": "6.49.0",
     "pg": "8.23.1",

@@ -1,11 +1,15 @@
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
+import { loadEnvConfig } from "@next/env";
 import type { PoolClient } from "pg";
 import { chunkText } from "../lib/chunk";
 import { getPool } from "../lib/db";
 import { embedTexts } from "../lib/embeddings";
 
 const EMBEDDING_BATCH_SIZE = 100;
+
+// CLI scripts do not get Next.js environment loading automatically.
+loadEnvConfig(process.cwd());
 
 async function findFiles(directory: string): Promise<string[]> {
   const entries = await readdir(directory, { withFileTypes: true });
