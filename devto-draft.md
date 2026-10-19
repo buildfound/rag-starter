@@ -6,7 +6,7 @@ tags: rag, nextjs, postgres, openai
 
 Retrieval-augmented generation does not need a large framework or a separate vector database. This walkthrough builds a compact version with Next.js, Postgres, pgvector, the official OpenAI package, and `pg`.
 
-The complete starter is here: https://github.com/fdarkaou/rag-starter
+The complete starter is here: https://github.com/buildfound/rag-starter
 
 The flow has four parts:
 
